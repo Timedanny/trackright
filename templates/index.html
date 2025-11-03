@@ -5,6 +5,16 @@
         <title>TrackRight</title>
     </head>
     <body>
-        <h1>Welcome to TrackRight!</h1>
+        <h1>All Tickets</h1>
+
+        {% for ticket in tickets %}
+        <div>
+            <h2>{{ ticket.title }}</h2>
+            <p><small>Status: {{ ticket.status }}</small></p>
+            <p>{{ ticket.description }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+
     </body>
 </html>

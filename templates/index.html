@@ -5,6 +5,8 @@
         <title>TrackRight</title>
     </head>
     <body>
+        <a href="{{ url_for('create')  }}">Create New Ticket</a>
+        <hr>
         <h1>All Tickets</h1>
 
         {% for ticket in tickets %}

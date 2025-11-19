@@ -5,5 +5,6 @@ CREATE TABLE tickets (
     created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     title TEXT NOT NULL,
     description TEXT NOT NULL,
-    status TEXT NOT NULL
+    status TEXT NOT NULL,
+    priority TEXT NOT NULL
 );

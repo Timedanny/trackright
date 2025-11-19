@@ -12,7 +12,7 @@
         {% for ticket in tickets %}
         <div>
             <h2>{{ ticket.title }}</h2>
-            <p><small>Status: {{ ticket.status }}</small></p>
+            <p><small>Status: {{ ticket.status }}, Priority: {{ ticket.priority }}</small></p>
             <p>{{ ticket.description }}</p>
 
             <a href="{{  url_for('edit', id=ticket.id) }}">Edit</a>

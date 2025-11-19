@@ -20,10 +20,11 @@ def create():
     if request.method == 'POST':
         title = request.form['title']
         description = request.form['description']
+        priority = request.form['priority']
 
         conn = get_db_connection()
-        conn.execute('INSERT INTO tickets (title, description, status) VALUES (?, ?, ?)',
-                     (title, description, 'Open'))
+        conn.execute('INSERT INTO tickets (title, description, status, priority) VALUES (?, ?, ?, ?)',
+                     (title, description, 'Open', priority))
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
@@ -42,10 +43,11 @@ def edit(id):
         title = request.form['title']
         description = request.form['description']
         status = request.form['status']
+        priority = request.form['priority']
 
         conn = get_db_connection()
-        conn.execute('UPDATE tickets SET title = ?, description = ?, status = ? WHERE id = ?',
-                     (title, description, status, id))
+        conn.execute('UPDATE tickets SET title = ?, description = ?, status = ?, priority = ? WHERE id = ?',
+                     (title, description, status, priority, id))
         conn.commit()
         conn.close()
         return redirect(url_for('index'))

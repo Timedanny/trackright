@@ -2,17 +2,17 @@
 
 A full-stack bug tracking application built using **Python** and **Flask**.
 
-## 🚀 About the Project
+## About the Project
 As a QA professional, I spend my days finding and logging bugs in software. I built **TrackRight** to demonstrate my understanding of the full software development lifecycle—from database architecture to the frontend user interface.
 
 This application demonstrates a full **CRUD** (Create, Read, Update, Delete) workflow for managing tickets.
 
-## ✨ Features
+## Features
 * **Dashboard:** A dashboard showing all active tickets.
 * **Ticket Management:** Create, read, update, and delete tickets.
 * **Priority System:** A logic system to allow severe tickets to be assigned a higher priority (High/Medium/Low).
 
-## ⚙️ How to Run
+## How to Run
 1.  Clone the repository:
     ```bash
     git clone [https://github.com/Timedanny/trackright.git](https://github.com/Timedanny/trackright.git)
@@ -42,7 +42,7 @@ This application demonstrates a full **CRUD** (Create, Read, Update, Delete) wor
     flask run
     ```
 
-## 🧠 Design Patterns
+##  Design Patterns
 This project follows the **Model-View-Controller (MVC)** pattern:
 * **Model:** `schema.sql` defines the data structure.
 * **View:** Jinja templates handle the presentation layer.

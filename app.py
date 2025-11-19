@@ -51,5 +51,13 @@ def edit(id):
         return redirect(url_for('index'))
     return render_template('edit.html', ticket=ticket)
 
+@app.route('/<int:id>/delete', methods=('POST',))
+def delete(id):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM tickets WHERE id = ?', (id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)

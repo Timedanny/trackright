@@ -1,0 +1,21 @@
+<h1>Edit Ticket</h1>
+
+<form method="post">
+    <label for="title">Title</label><br>
+    <input type="text" name="title" id="title"
+           value="{{ ticket.title }}" required><br><br>
+    
+    <label for="description">Description</label><br>
+    <textarea name="description" id="description" required>
+        {{ ticket.description }}
+    </textarea><br><br>
+
+    <label for="status">Status</label><br>
+    <select name="status" id="status">
+        <option value="Open" {% if ticket.status == 'Open' %}selected{% endif %}>Open</option>
+        <option value="In Progress" {% if ticket.status == 'In Progress' %}selected{% endif %}>In Progress</option>
+        <option value="Closed" {% if ticket.status == 'Closed' %}selected{% endif %}>Closed</option>
+    </select><br><br>
+
+    <button type="submit">Update</button>
+</form>
